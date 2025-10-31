@@ -1,9 +1,15 @@
 import fs from 'fs-extra';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import dayjs from 'dayjs';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const bookingsPath = path.join(__dirname, '../../data/bookings.json');
 
 export const getAllBookings = async () => {
   try {
-    const bookings = await fs.readJson('data/bookings.json');
+    const bookings = await fs.readJson(bookingsPath);
     return bookings;
   } catch (error) {
     throw error;
@@ -26,7 +32,7 @@ export const createBooking = async (bookingData) => {
       throw new Error('License expires before booking ends');
     }
 
-    const bookings = await fs.readJson('data/bookings.json');
+    const bookings = await fs.readJson(bookingsPath);
 
     const overlap = bookings.find(
       b => b.userId === userId &&
@@ -40,7 +46,7 @@ export const createBooking = async (bookingData) => {
 
     const newBooking = { id: Date.now(), userId, carId, from, to, licenseExpiry };
     bookings.push(newBooking);
-    await fs.writeJson('data/bookings.json', bookings, { spaces: 2 });
+    await fs.writeJson(bookingsPath, bookings, { spaces: 2 });
 
     return newBooking;
   } catch (error) {

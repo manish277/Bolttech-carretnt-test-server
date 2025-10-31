@@ -1,10 +1,16 @@
 import fs from 'fs-extra';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import dayjs from 'dayjs';
 import { getSeason } from '../utils/season.js';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const carsPath = path.join(__dirname, '../../data/cars.json');
+
 export const getAllCars = async (from, to) => {
   try {
-    const cars = await fs.readJson('data/cars.json');
+    const cars = await fs.readJson(carsPath);
     const fromDate = dayjs(from);
     const toDate = dayjs(to);
     const days = toDate.diff(fromDate, 'day');
