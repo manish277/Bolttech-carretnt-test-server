@@ -1,26 +1,42 @@
 [
   {
-    "id": 1761914333404,
-    "userId": 5000,
+    "id": 1761918621014,
+    "userId": 2,
     "carId": 1,
-    "from": "2027-03-01",
-    "to": "2027-03-05",
-    "licenseExpiry": "2028-12-31"
+    "from": "2025-10-31",
+    "to": "2025-11-05",
+    "licenseExpiry": "2025-12-06",
+    "carBrand": "Toyota",
+    "carModel": "Yaris"
   },
   {
-    "id": 1761914333410,
-    "userId": 5002,
-    "carId": 1,
-    "from": "2027-01-15",
-    "to": "2027-01-20",
-    "licenseExpiry": "2027-01-20"
+    "id": 1761919965061,
+    "userId": 3,
+    "carId": 3,
+    "from": "2025-10-31",
+    "to": "2025-11-08",
+    "licenseExpiry": "2025-12-06",
+    "carBrand": "Nissan",
+    "carModel": "Qashqai"
   },
   {
-    "id": 1761914333412,
-    "userId": 5003,
-    "carId": 1,
-    "from": "2027-01-15",
-    "to": "2027-01-20",
-    "licenseExpiry": "2028-06-30"
+    "id": 1761920682232,
+    "userId": 5,
+    "carId": 2,
+    "from": "2026-04-09",
+    "to": "2026-04-22",
+    "licenseExpiry": "2026-04-29",
+    "carBrand": "Seat",
+    "carModel": "Ibiza"
+  },
+  {
+    "id": 1761920814116,
+    "userId": 12,
+    "carId": 2,
+    "from": "2026-03-13",
+    "to": "2026-03-28",
+    "licenseExpiry": "2026-04-11",
+    "carBrand": "Seat",
+    "carModel": "Ibiza"
   }
 ]
